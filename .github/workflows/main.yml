@@ -15,8 +15,8 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
-      - name: echo
-        run: echo Hello
-      - uses: ./action-a
-        with:
-          MY_NAME: "Foo"
+  cleanup:
+    name: cleanup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo cleanup
