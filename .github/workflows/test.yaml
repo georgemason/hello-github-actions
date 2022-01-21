@@ -3,8 +3,8 @@ on: [push,workflow_dispatch]
 
 jobs:
   build:
-    name: Hello world action
+    name: output test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: echo ::warn file=main.cpp,line=3,col=1::hello world
+      - run: echo "::warn file=main.cpp,line=3,col=1::'hello world'"
