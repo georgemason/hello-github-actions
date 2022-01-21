@@ -2,11 +2,16 @@ name: linting
 
 on: [push,workflow_dispatch]
 jobs:
-  linting:
-    name: cppcheck
+  checkout:
+    name: checkout
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         name: checkout
+  linting:
+    name: cppcheck
+    runs-on: ubuntu-latest
+    needs: [checkout]
+    steps:
       - name: cpp-check
         uses: tonybaloney/cppcheck-action@master
