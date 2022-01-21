@@ -7,4 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: echo '::warn file=main.cpp,line=3,col=1::"hello world"'
+      - run: echo "::debug::debug world"
+      - run: echo "::notice file=main.cpp,line=3,col=1::notice world"
+      - run: echo "::warning file=main.cpp,line=3,col=1::warning world"
+      - run: echo "::error file=main.cpp,line=3,col=1::error world"
+      - run: echo "::group::My title"
+      - run: echo "Inside group"
+      - run: echo "::endgroup::"
