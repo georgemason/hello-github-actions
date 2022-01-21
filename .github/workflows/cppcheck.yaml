@@ -13,5 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [checkout]
     steps:
+      - run: pwd
+      - run: ls
       - name: cpp-check
         uses: deep5050/cppcheck-action@main
