@@ -4,6 +4,7 @@ on: [push,workflow_dispatch]
 jobs:
   setup:
     name: setup
+    runs-on: ubuntu-latest
     steps:
       - run: echo setup
   build:
