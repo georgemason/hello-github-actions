@@ -6,5 +6,6 @@ jobs:
     name: cppcheck
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: cpp-check
         uses: tonybaloney/cppcheck-action@master
