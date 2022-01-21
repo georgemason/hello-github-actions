@@ -1,6 +1,6 @@
 name: linting
 
-on: [push]
+on: [push,workflow_dispatch]
 jobs:
   linting:
     name: cppcheck
