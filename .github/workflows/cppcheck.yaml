@@ -10,4 +10,4 @@ jobs:
       - run: pwd
       - run: ls
       - name: cpp-check
-        uses: deep5050/cppcheck-action@main
+        uses: tonybaloney/cppcheck-action@1.0
